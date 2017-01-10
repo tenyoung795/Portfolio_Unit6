@@ -42,3 +42,6 @@
       width: 200px;
       height: auto;
     }
+    body {
+      font-family: 'Droid Sans';
+    }
