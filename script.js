@@ -1,10 +1,12 @@
-$(document).ready(function(){
-    //Write all your jQuery code here
-        $("button").click(function() {
-      $("#like").html("You like this project!");
+/* global $ */
+/* global jQuery */
+$(document).ready(function() {
+    $(".like").each(function() {
+        var like = this;
+        $("button", like).click(function() {
+            var liked = jQuery.data(like, "liked") || false;
+            $("p", like).html(liked ? "" : "You like this project!");
+            jQuery.data(like, "liked", !liked);
+        });
     });
-    
-    
-    
-    
 });
